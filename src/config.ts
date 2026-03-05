@@ -2,24 +2,24 @@ export const SITE = {
   website: "https://devosfera.vercel.app/",
   author: "Andrés Ujpán",
   profile: "https://github.com/0xdres",
-  desc: "Un blog para compartir mis pensamientos y proyectos mientras aprendo cosas nuevas.",
+  desc: "A blog to share my thoughts, projects, and everything I’m learning.",
   title: "Devosfera",
   ogImage: "devosfera-og.webp", // ubicado en la carpeta public
   lightAndDarkMode: true,
   postPerIndex: 6,
   postPerPage: 8,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
-  showGalleries: true,
+  showArchives: false,
+  showGalleries: false,
   showBackButton: true, // show back button in post detail
   editPost: {
     enabled: true,
-    text: "Editar este post",
+    text: "Edit this post",
     url: "https://github.com/0xdres/astro-devosfera/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
-  lang: "es", // html lang code. Set this empty and default will be "en"
+  lang: "en", // html lang code. Set this empty and default will be "en"
   timezone: "America/Guatemala", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   introAudio: {
     enabled: true, // mostrar/ocultar el reproductor en el hero

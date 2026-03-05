@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "astro/types";
 import { SOCIALS } from "@/constants";
 import LinkButton from "./LinkButton.astro";
 import { SITE } from "@/config";
-import Logo from "@/assets/logo/devosfera.svg";
+import Logo from "@/assets/logo/loaded-brush-logo.svg";
 
 const currentYear = new Date().getFullYear();
 
@@ -35,12 +35,14 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
           href="/"
           class="group relative flex items-center gap-2 text-lg font-bold tracking-tight"
         >
-          <Logo class="w-28 opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.5)] dark:invert" />
+          <Logo
+  class="w-28 opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.5)] text-foreground [&_path]:fill-current"
+/>
         </a>
         <p
           class="max-w-xs text-center font-cartograph text-[11px] leading-relaxed tracking-wide text-foreground/40 sm:text-start"
         >
-          Un espacio donde la curiosidad se convierte en código.
+          The ultimate mini painting app
         </p>
       </div>
 
@@ -48,7 +50,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
       <div class="flex flex-col items-center gap-3 sm:items-end">
         <span
           class="font-cartograph text-[10px] tracking-wider text-muted-foreground uppercase select-none"
-          >Conectar</span
+          >Connect</span
         >
         <div class="flex items-center gap-2">
           {
@@ -80,10 +82,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
     >
       <p class="font-cartograph text-[11px] tracking-wide opacity-35">
         &copy; {currentYear}
-        {SITE.title}. Todos los derechos reservados.
-      </p>
-      <p class="font-cartograph text-[11px] tracking-wide opacity-30">
-        Hecho con <span class="text-accent">&#9829;</span> y mucho café
+        Loaded Brush.
       </p>
     </div>
   </div>

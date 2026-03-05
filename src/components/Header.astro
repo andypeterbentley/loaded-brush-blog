@@ -4,7 +4,7 @@ import IconSearch from "@/assets/icons/IconSearch.svg";
 import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconGallery from "@/assets/icons/IconGallery.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
-import Logo from "@/assets/logo/devosfera.svg";
+import Logo from "@/assets/logo/loaded-brush-logo.svg";
 import LinkButton from "./LinkButton.astro";
 import { SITE } from "@/config";
 
@@ -47,7 +47,7 @@ const isActive = (path: string) => {
         class="group relative z-20 flex items-center gap-2 text-xl font-bold tracking-tight sm:text-2xl"
       >
         <!-- <span class="nav-logo-text">{SITE.title}</span> -->
-        <Logo class="w-37.5 dark:invert" />
+        <Logo class="w-37.5 text-foreground [&_path]:fill-current" />
       </a>
 
       <!-- Nav area -->
@@ -83,18 +83,13 @@ const isActive = (path: string) => {
               >Tags</a
             >
           </li>
-          <li>
-            <a
-              href="/about"
-              class:list={["nav-link", { "nav-active": isActive("/about") }]}
-              >About</a
-            >
-          </li>
+          
           <li class="flex items-center">
             <a
               href="/search"
               class:list={["nav-link", { "nav-active": isActive("/search") }]}
-              title="Ir a búsqueda">Search</a
+              title="Go to search"
+              >Search</a
             >
           </li>
           {
@@ -124,11 +119,11 @@ const isActive = (path: string) => {
                     "nav-link",
                     { "nav-active": isActive("/galleries") },
                   ]}
-                  title="Galerías"
+                  title="Galleries"
                   aria-label="galleries"
                 >
                   <IconGallery class="hidden sm:inline-block" />
-                  <span class="sm:sr-only">Galerías</span>
+                  <span class="sm:sr-only">Galleries</span>
                 </LinkButton>
               </li>
             )
@@ -143,8 +138,8 @@ const isActive = (path: string) => {
             <button
               data-search-trigger
               class="nav-search-btn"
-              title="Buscar (⌘K)"
-              aria-label="Abrir búsqueda"
+              title="Search (⌘K)"
+              aria-label="Open search"
               aria-keyshortcuts="Meta+K"
             >
               <IconSearch class="size-4.5" />
@@ -198,14 +193,6 @@ const isActive = (path: string) => {
               <span class="mobile-nav-indicator"></span>
               <span>Tags</span>
             </a>
-            <a
-              href="/about"
-              class:list={["mobile-nav-link", { active: isActive("/about") }]}
-              style="--i:2"
-            >
-              <span class="mobile-nav-indicator"></span>
-              <span>About</span>
-            </a>
             {
               SITE.showArchives && (
                 <a
@@ -232,7 +219,7 @@ const isActive = (path: string) => {
                   style="--i:4"
                 >
                   <span class="mobile-nav-indicator" />
-                  <span>Galerías</span>
+                  <span>Galleries</span>
                 </a>
               )
             }
@@ -246,8 +233,8 @@ const isActive = (path: string) => {
             <button
               data-search-trigger
               class="mobile-action-btn flex-1 justify-center"
-              title="Buscar (⌘K)"
-              aria-label="Abrir búsqueda"
+              title="Search (⌘K)"
+              aria-label="Open search"
             >
               <IconSearch class="size-4" />
               <span>Search</span>
@@ -257,7 +244,7 @@ const isActive = (path: string) => {
                 <button
                   id="theme-btn-mobile"
                   class="mobile-action-btn flex-1 justify-center"
-                  title="Cambiar tema"
+                  title="Toggle theme"
                   aria-label="auto"
                   aria-live="polite"
                 >

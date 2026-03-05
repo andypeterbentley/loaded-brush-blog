@@ -28,14 +28,14 @@
     "sharp": "^0.34.5",
     "slugify": "^1.6.6",
     "tailwindcss": "^4.1.18",
-    "tinacms": "^3.5.1"
+    "tinacms": "^2.2.9"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
     "@pagefind/default-ui": "^1.4.0",
     "@shikijs/transformers": "^3.22.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@tinacms/cli": "^2.1.7",
+    "@tinacms/cli": "^0.60.5",
     "@types/lodash.kebabcase": "^4.1.9",
     "@types/node": "^25.3.3",
     "@typescript-eslint/parser": "^8.55.0",
